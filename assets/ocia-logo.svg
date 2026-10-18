@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <!-- Gradiente de fondo azul profundo -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060c1e" />
+      <stop offset="100%" stop-color="#002359" />
+    </linearGradient>
+
+    <!-- Gradiente minimalista para la Cordillera -->
+    <linearGradient id="andesGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#004e98" stop-opacity="0.45" />
+      <stop offset="100%" stop-color="#060c1e" stop-opacity="0.9" />
+    </linearGradient>
+
+    <!-- Recorte circular para que la cordillera se ajuste al escudo -->
+    <clipPath id="circleClip">
+      <circle cx="200" cy="200" r="182" />
+    </clipPath>
+
+    <!-- Ruta curva en la parte inferior -->
+    <path id="textArc" d="M 65,278 A 156,156 0 0,0 335,278" fill="none" />
+  </defs>
+
+  <!-- Fondo Circular Principal -->
+  <circle cx="200" cy="200" r="184" fill="url(#bgGrad)" stroke="#00a8e8" stroke-width="5" />
+
+  <!-- ==================== CORDILLERA DE LOS ANDES ==================== -->
+  <g clip-path="url(#circleClip)">
+    <polygon points="30,260 95,185 140,220 200,150 260,220 305,175 370,260" fill="url(#andesGrad)" />
+    <!-- Trazos geométricos simples -->
+    <g stroke="#00a8e8" stroke-width="1.2" opacity="0.3" fill="none">
+      <polyline points="30,260 95,185 140,220 200,150 260,220 305,175 370,260" stroke-width="1.8" opacity="0.5" />
+      <line x1="95" y1="185" x2="115" y2="260" />
+      <line x1="200" y1="150" x2="175" y2="260" />
+      <line x1="200" y1="150" x2="225" y2="260" />
+      <line x1="305" y1="175" x2="290" y2="260" />
+    </g>
+  </g>
+
+  <!-- ==================== RED NEURONAL MINIMALISTA ==================== -->
+  <!-- Conexiones (Aristas con color fijo sólido) -->
+  <g stroke="#60a5fa" stroke-width="2" opacity="0.55">
+    <!-- Entrada (105) a Capa Oculta (200) -->
+    <line x1="105" y1="90" x2="200" y2="55" />
+    <line x1="105" y1="90" x2="200" y2="140" stroke-width="3" opacity="0.85" />
+    <line x1="105" y1="90" x2="200" y2="225" />
+
+    <line x1="105" y1="140" x2="200" y2="55" />
+    <line x1="105" y1="140" x2="200" y2="140" stroke-width="3.5" opacity="1" />
+    <line x1="105" y1="140" x2="200" y2="225" />
+
+    <line x1="105" y1="190" x2="200" y2="55" />
+    <line x1="105" y1="190" x2="200" y2="140" stroke-width="3" opacity="0.85" />
+    <line x1="105" y1="190" x2="200" y2="225" />
+
+    <!-- Capa Oculta (200) a Salida (295) -->
+    <line x1="200" y1="55" x2="295" y2="115" />
+    <line x1="200" y1="55" x2="295" y2="165" />
+
+    <line x1="200" y1="140" x2="295" y2="115" stroke-width="3.5" opacity="1" />
+    <line x1="200" y1="140" x2="295" y2="165" stroke-width="3.5" opacity="1" />
+
+    <line x1="200" y1="225" x2="295" y2="115" />
+    <line x1="200" y1="225" x2="295" y2="165" />
+  </g>
+
+  <!-- CAPA 1: Nodos de Entrada (2 colores: Relleno Azul Cian + Borde Blanco) -->
+  <g fill="#00a8e8" stroke="#ffffff" stroke-width="3">
+    <circle cx="105" cy="90" r="10" />
+    <circle cx="105" cy="140" r="10" />
+    <circle cx="105" cy="190" r="10" />
+  </g>
+
+  <!-- CAPA 2: Nodos Ocultos Secundarios (2 colores: Relleno Azul Oscuro + Borde Blanco) -->
+  <g fill="#002359" stroke="#ffffff" stroke-width="3">
+    <circle cx="200" cy="55" r="10" />
+    <circle cx="200" cy="225" r="10" />
+  </g>
+
+  <!-- NODO CENTRAL: Núcleo Bandera de Chile Simplificado -->
+  <g transform="translate(200, 140)">
+    <circle cx="0" cy="0" r="28" fill="#0039a6" />
+    <path d="M -28,0 A 28,28 0 1,0 28,0 Z" fill="#d52b1e" />
+    <circle cx="0" cy="0" r="28" fill="none" stroke="#ffffff" stroke-width="3.5" />
+    <!-- Estrella Solitaria -->
+    <polygon points="0,-14 4.2,-4.3 14.5,-4.3 6.2,2.5 9.2,12.8 0,6.6 -9.2,12.8 -6.2,2.5 -14.5,-4.3 -4.2,-4.3" fill="#ffffff" />
+  </g>
+
+  <!-- CAPA 3: Nodos de Salida (2 colores: Relleno Rojo + Borde Blanco) -->
+  <g fill="#d52b1e" stroke="#ffffff" stroke-width="3">
+    <circle cx="295" cy="115" r="10" />
+    <circle cx="295" cy="165" r="10" />
+  </g>
+
+  <!-- Línea horizonte roja -->
+  <path d="M 38 260 Q 200 272 362 260" fill="none" stroke="#d52b1e" stroke-width="4.5" stroke-linecap="round" />
+
+  <!-- ==================== TIPOGRAFÍA ==================== -->
+  <!-- Sigla OCIA -->
+  <text x="200" y="318" font-family="system-ui, -apple-system, &#39;Segoe UI&#39;, Roboto, Helvetica, Arial, sans-serif" font-size="48" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="4">
+    OC<tspan fill="#d52b1e">I</tspan><tspan fill="#00a8e8">A</tspan>
+  </text>
+
+  <!-- Subtítulo curvo siguiendo el borde inferior -->
+  <text font-family="system-ui, -apple-system, &#39;Segoe UI&#39;, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#a0c4ff" letter-spacing="2">
+    <textPath href="#textArc" startOffset="50%" text-anchor="middle">
+      OLIMPIADA CHILENA DE IA
+    </textPath>
+  </text>
+</svg>

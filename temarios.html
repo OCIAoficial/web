@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="es-CL">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f7f8f3">
+    <meta name="description" content="Temario preliminar de las fases regional y nacional de OCIA, y referencia para la preparación internacional.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_CL">
+    <meta property="og:title" content="Temarios · OCIA">
+    <meta property="og:description" content="Temario preliminar de las fases regional y nacional de OCIA, y referencia para la preparación internacional.">
+    <title>Temarios · OCIA</title>
+    <link rel="icon" href="./assets/ocia-logo.svg" type="image/svg+xml">
+    <link rel="preload" href="./assets/fonts/Manrope-Variable.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="stylesheet" href="./styles.css">
+    <script type="module" src="./app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="./index.html#inicio" aria-label="OCIA, inicio">
+          <img class="brand-mark" src="./assets/ocia-logo.svg" width="52" height="52" alt="">
+          <span class="brand-name">OCIA</span>
+          <span class="brand-description">Olimpiada Chilena<br>de Inteligencia Artificial</span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation" hidden><span>Menú</span><span class="menu-lines" aria-hidden="true"></span></button>
+        <nav id="main-navigation" class="main-navigation" aria-label="Navegación principal">
+          <a href="./index.html#participa">Convocatoria</a>
+          <a href="./temarios.html" aria-current="page">Temarios</a>
+          <a href="./materiales.html">Materiales</a>
+          <a href="./index.html#preguntas">Preguntas</a>
+          <a href="./noticias.html">Noticias</a>
+          <a class="nav-contact" href="./index.html#contacto">Contacto <span aria-hidden="true">↗</span></a>
+        </nav>
+      </div>
+    </header>
+    <main id="contenido" class="inner-page">
+      <div class="container page-intro">
+        <nav class="breadcrumbs" aria-label="Ruta de navegación"><a href="./index.html">Inicio</a><span aria-hidden="true">/</span><span aria-current="page">Temarios</span></nav>
+        <p class="eyebrow">PREPARACIÓN <span class="eyebrow-divider">/</span> <span data-cycle>2026–2027</span></p>
+        <h1>Temarios.</h1>
+        <p class="page-lead">Los contenidos de preparación, organizados por fase.</p>
+        <nav class="phase-navigation" aria-label="Fases del temario"><a href="#regional"><span>01</span>Fase regional<span aria-hidden="true">↓</span></a><a href="#nacional"><span>02</span>Fase nacional<span aria-hidden="true">↓</span></a><a href="#internacional"><span>03</span>Fase internacional<span aria-hidden="true">↓</span></a></nav>
+      </div>      <div class="container syllabus-sections">
+        <section class="syllabus-phase" id="regional" aria-labelledby="regional-heading">
+          <div class="phase-heading"><span class="phase-number">01</span><h2 id="regional-heading">Fase regional</h2><p>Comprender cómo aprenden los modelos, interpretar datos y resolver problemas paso a paso. La preparación comienza con ejemplos conceptuales y avanza hacia la lectura de código sencillo.</p><a class="text-link" href="./materiales.html">Materiales para esta fase <span aria-hidden="true">→</span></a></div>
+          <dl class="topic-outline"><div><dt>Aprender de ejemplos y generalizar</dt><dd>Clasificación y regresión, entrenamiento y predicción, aprendizaje supervisado, no supervisado y por refuerzo. Reconocer el sobreajuste y comprender por qué hay que evaluar con datos nuevos.</dd></div><div><dt>Algoritmos y razonamiento</dt><dd>Seguir secuencias, condiciones y repeticiones. Interpretar lógica, estados, grafos y búsquedas en anchura y profundidad. Distinguir exploración y aprovechamiento al aprender de recompensas.</dd></div><div><dt>Datos, representaciones y sesgos</dt><dd>Ejemplos, características y etiquetas. Vectores, imágenes y secuencias. Interpretar conteos, proporciones y promedios. Reconocer escalas, datos faltantes y sesgos de representación.</dd></div><div><dt>Árboles, vecinos y fronteras de decisión</dt><dd>Seguir un árbol y comparar divisiones con impureza de Gini. Calcular distancias y predicciones con kNN, formar grupos con k-means e interpretar fronteras y márgenes de una SVM lineal.</dd></div><div><dt>Medir y evaluar</dt><dd>Entrenamiento, validación y prueba. Fugas de información y matrices de confusión. Interpretar exactitud, precisión, sensibilidad y error cuadrático medio, y comparar con una referencia básica.</dd></div><div><dt>Ideas de redes neuronales</dt><dd>Sumas ponderadas, pesos, sesgos y activaciones. Seguir los cálculos de una red pequeña y comprender la pérdida, el descenso de gradiente y la retropropagación a nivel conceptual.</dd></div><div><dt>De los algoritmos a Python</dt><dd>Leer y seguir código breve con variables, listas, condiciones, ciclos y funciones. Relacionar el código con los cálculos y algoritmos estudiados, a través de ejemplos guiados.</dd></div></dl>
+        </section>
+        <section class="syllabus-phase" id="nacional" aria-labelledby="nacional-heading">
+          <div class="phase-heading"><span class="phase-number">02</span><h2 id="nacional-heading">Fase nacional</h2><p>Pasar del razonamiento conceptual a construir y comparar soluciones en Python.</p></div>
+          <dl class="topic-outline"><div><dt>Preparación de datos</dt><dd>Uso de NumPy y pandas. Tratamiento de valores faltantes, codificación de variables y normalización.</dd></div><div><dt>Aprendizaje supervisado</dt><dd>Regresión lineal y logística, vecinos más cercanos, árboles de decisión y conjuntos de árboles. Entrenamiento y comparación de modelos.</dd></div><div><dt>Aprendizaje no supervisado</dt><dd>Agrupamiento con k-means y reducción de dimensionalidad con PCA. Interpretación de los patrones encontrados.</dd></div><div><dt>Validación y métricas</dt><dd>Validación cruzada, precisión, recall y F1. Selección de hiperparámetros y prevención de filtraciones de datos.</dd></div><div><dt>Redes neuronales en la práctica</dt><dd>Implementar y entrenar redes pequeñas con PyTorch. Interpretar curvas de aprendizaje, diagnosticar sobreajuste y aplicar regularización.</dd></div><div><dt>Experimentos completos e introducción a imágenes y texto</dt><dd>Preparar un notebook reproducible con datos, modelos y métricas. Explorar representaciones y modelos preentrenados en ejercicios guiados y comunicar los resultados y sus limitaciones.</dd></div></dl>
+        </section>
+        <section class="syllabus-phase" id="internacional" aria-labelledby="internacional-heading">
+          <div class="phase-heading"><span class="phase-number">03</span><h2 id="internacional-heading">Fase internacional</h2><p>Áreas del temario internacional publicado.</p><a class="text-link" href="https://ioai-official.org/syllabus/" target="_blank" rel="noopener noreferrer">Consultar el temario internacional <span aria-hidden="true">↗</span><span class="sr-only"> (abre una pestaña nueva)</span></a></div>
+          <dl class="topic-outline"><div><dt>Fundamentos y aprendizaje automático</dt><dd>Programación, procesamiento de datos, modelos supervisados y no supervisados, ingeniería de variables y evaluación.</dd></div><div><dt>Redes neuronales y aprendizaje profundo</dt><dd>Entrenamiento de redes, regularización, embeddings, atención, transformers y ajuste de modelos preentrenados.</dd></div><div><dt>Visión por computador</dt><dd>Clasificación, detección y segmentación de imágenes. Modelos preentrenados, aumento de datos y generación de imágenes.</dd></div><div><dt>Lenguaje natural y audio</dt><dd>Clasificación de textos, modelos de lenguaje y procesamiento de audio con modelos preentrenados.</dd></div></dl>
+        </section>
+      </div>
+    </main>
+    <footer class="site-footer"><div class="container"><div class="footer-top"><a class="brand footer-brand" href="./index.html#inicio" aria-label="OCIA, volver al inicio"><img class="brand-mark" src="./assets/ocia-logo.svg" width="52" height="52" alt=""><span class="brand-name">OCIA</span><span class="brand-description">Olimpiada Chilena<br>de Inteligencia Artificial</span></a></div><div class="footer-bottom"><p>Olimpiada Chilena de Inteligencia Artificial</p><p>OCIA · Chile · <span data-cycle>2026–2027</span></p><a href="./index.html#inicio">Volver arriba <span aria-hidden="true">↑</span></a></div></div></footer>
+  </body>
+</html>

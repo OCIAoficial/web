@@ -1,0 +1,8 @@
+# Instrucciones locales para agentes
+/AGENTS.md
+
+# Archivos generados y dependencias locales
+/dist/
+/node_modules/
+*.log
+.DS_Store

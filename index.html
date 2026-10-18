@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="es-CL">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f7f8f3">
+    <meta name="description" content="OCIA, Olimpiada Chilena de Inteligencia Artificial. Convocatoria 2026–2027, proceso de selección nacional y recursos de preparación para la IOAI.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_CL">
+    <meta property="og:title" content="OCIA · Olimpiada Chilena de Inteligencia Artificial">
+    <meta property="og:description" content="Olimpiada Chilena de Inteligencia Artificial. Ciclo 2026–2027: información, preparación y camino a la IOAI.">
+    <title>OCIA · Olimpiada Chilena de Inteligencia Artificial</title>
+    <link rel="icon" href="./assets/ocia-logo.svg" type="image/svg+xml">
+    <link rel="preload" href="./assets/fonts/Manrope-Variable.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="stylesheet" href="./styles.css">
+    <script type="module" src="./app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#inicio" aria-label="OCIA, inicio">
+          <img class="brand-mark" src="./assets/ocia-logo.svg" width="52" height="52" alt="">
+          <span class="brand-name">OCIA</span>
+          <span class="brand-description">Olimpiada Chilena<br>de Inteligencia Artificial</span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation" hidden><span>Menú</span><span class="menu-lines" aria-hidden="true"></span></button>
+        <nav id="main-navigation" class="main-navigation" aria-label="Navegación principal">
+          <a href="#participa">Convocatoria</a>
+          <a href="./temarios.html">Temarios</a>
+          <a href="./materiales.html">Materiales</a>
+          <a href="#preguntas">Preguntas</a>
+          <a href="./noticias.html">Noticias</a>
+          <a class="nav-contact" href="#contacto">Contacto <span aria-hidden="true">↗</span></a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <section class="hero container" id="inicio" aria-labelledby="hero-heading">
+        <div class="hero-copy">
+          <p class="eyebrow">CICLO <span data-cycle>2026–2027</span></p>
+          <h1 id="hero-heading">Olimpiada Chilena<br>de Inteligencia<br><span class="hero-accent">Artificial.</span></h1>
+          <p class="hero-description">Fase nacional de la Olimpiada Internacional de Inteligencia Artificial. Información sobre la convocatoria, el proceso de selección y los recursos de preparación para representar a Chile en la olimpiada internacional.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#participa">Ver convocatoria <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="./materiales.html">Materiales de preparación <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+
+        <section class="mini-lab" aria-labelledby="lab-title">
+          <div class="lab-topline"><span>DEMOSTRACIÓN INTERACTIVA</span><span aria-hidden="true">✳</span></div>
+          <h2 id="lab-title">Clasificación por vecinos cercanos.</h2>
+          <p class="lab-intro">Una forma de decidir si un punto nuevo pertenece al grupo A o al grupo B es mirar sus tres vecinos más cercanos y elegir el grupo que más se repite entre ellos.</p>
+          <div class="lab-plot">
+            <svg id="lab-graph" viewBox="0 0 400 280" role="img" aria-labelledby="graph-title graph-description">
+              <title id="graph-title">Demostración de clasificación por vecinos más cercanos</title>
+              <desc id="graph-description">Dos grupos de ejemplos: A en blanco y B en verde. Mueve el punto naranja con el botón Mover punto y clasifícalo según sus tres vecinos más cercanos. También puedes hacer clic en el gráfico.</desc>
+              <defs><pattern id="dot-grid" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="currentColor" opacity=".2"/></pattern></defs>
+              <rect width="400" height="280" fill="url(#dot-grid)"/>
+              <path d="M20 260H380M20 260V20" class="graph-axis"/>
+              <g id="lab-lines" aria-hidden="true"></g>
+              <g id="lab-samples" aria-hidden="true"></g>
+              <g id="lab-query" transform="translate(213 154)" aria-hidden="true"><circle r="15" class="query-halo"/><path d="M0-8 8 0 0 8-8 0Z" class="query-point"/></g>
+            </svg>
+            <div class="lab-legend" aria-hidden="true"><span><i class="legend-a"></i> Grupo A</span><span><i class="legend-b"></i> Grupo B</span><span><i class="legend-query"></i> Punto Nuevo</span></div>
+          </div>
+          <div class="lab-controls" id="lab-controls" hidden><button id="lab-classify" type="button">Clasificar el punto <span aria-hidden="true">↗</span></button><button id="lab-move" type="button">Mover punto <span aria-hidden="true">⤨</span></button></div>
+          <p class="lab-result" id="lab-result" aria-live="polite" aria-atomic="true">Esta demo necesita JavaScript para clasificar el punto.</p>
+        </section>
+      </section>
+
+      <section class="institutional-section" aria-label="Organización y patrocinio">
+        <div class="container institutional-support">
+          <div class="institutional-group">
+            <h2>Organizan</h2>
+            <div class="organizer-logos">
+              <img class="institution-logo institution-logo-cenia" src="./assets/instituciones/cenia.png" width="300" height="90" alt="CENIA" loading="lazy" decoding="async">
+              <img class="institution-logo institution-logo-progcomp" src="./assets/instituciones/progcomp.png" width="2445" height="1310" alt="ProgComp" loading="lazy" decoding="async">
+            </div>
+          </div>
+          <div class="institutional-group">
+            <h2>Patrocina</h2>
+            <div class="sponsor-logos">
+              <img class="institution-logo institution-logo-imc" src="./assets/instituciones/imc-uc.svg" width="560" height="90" alt="IMC UC — Instituto de Ingeniería Matemática y Computacional" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="participate-section" id="participa" aria-labelledby="participate-heading">
+        <div class="container section">
+          <h2 class="section-label" id="participate-heading"><span class="section-index">01</span><span>Convocatoria</span></h2>
+
+          <div class="cycle-dashboard" data-tabs>
+            <div class="dashboard-top"><div><h3>Ciclo <span data-cycle>2026–2027</span></h3></div></div>
+            <div class="cycle-tabs" role="tablist" aria-label="Información del ciclo" data-tabs-nav hidden>
+              <button id="tab-convocatoria" type="button" role="tab" aria-selected="true" aria-controls="panel-convocatoria" tabindex="0">Convocatoria</button>
+              <button id="tab-bases" type="button" role="tab" aria-selected="false" aria-controls="panel-bases" tabindex="-1">Bases</button>
+            </div>
+            <div id="panel-convocatoria" role="tabpanel" aria-labelledby="tab-convocatoria" tabindex="0" class="cycle-panel">
+              <div class="call-layout"><div class="call-summary"><p>La inscripción es gratuita para estudiantes de 7° básico a 4° medio.</p><div class="call-actions"><button class="button button-primary" type="button" disabled title="Enlace de inscripción pendiente">Inscribirme <span aria-hidden="true">↗</span></button><button class="button button-outline" type="button" disabled title="Bases pendientes de publicación">Bases de la OCIA <span aria-hidden="true">↗</span></button></div></div>
+                <div class="calendar">
+                  <div class="calendar-heading"><h4>Calendario del ciclo</h4></div>
+                  <ol id="milestones">
+                    <li><span class="milestone-number">01</span><span class="milestone-title">Cierre de inscripción</span><time class="milestone-date" datetime="2027-01-03">3 de enero de 2027</time></li>
+                    <li><span class="milestone-number">02</span><span class="milestone-title">Fase pre-regional</span><time class="milestone-date" datetime="2027-01-09">9 de enero de 2027</time><span class="milestone-location">Lugar: Online</span></li>
+                    <li><span class="milestone-number">03</span><span class="milestone-title">Fase regional</span><time class="milestone-date" datetime="2027-01-16">16 de enero de 2027</time><span class="milestone-location">Lugar: Temuco, Concepción, Santiago, Valparaíso y Coquimbo</span></li>
+                    <li><span class="milestone-number">04</span><span class="milestone-title">Fase nacional</span><time class="milestone-date" datetime="2027-03-06">6 de marzo de 2027</time><span class="milestone-location">Lugar: Santiago</span></li>
+                    <li><span class="milestone-number">05</span><span class="milestone-title">Fase internacional</span><span class="milestone-date">4–10 de julio de 2027</span><span class="milestone-location">Lugar: Singapur</span></li>
+                  </ol>
+                </div></div>
+            </div>
+            <div id="panel-bases" role="tabpanel" aria-labelledby="tab-bases" tabindex="0" class="cycle-panel">
+              <div class="panel-intro"><p>Este es un resumen. Para consultar las bases en detalle, revisa el archivo de las bases.</p></div>
+              <dl class="rules-list">
+                <div><dt>Quiénes pueden participar</dt><dd>Estudiantes de 7° básico a 4° medio.</dd></div>
+                <div><dt>Inscripción gratuita</dt><dd>La inscripción no tiene costo. El acceso al formulario está en la pestaña Convocatoria.</dd></div>
+                <div><dt>Etapas de la competencia</dt><dd>El proceso contempla una fase pre-regional online, una fase regional en sedes y una fase nacional en Santiago.</dd></div>
+                <div><dt>Selección nacional</dt><dd>El proceso permite seleccionar a la delegación que representará a Chile en la olimpiada internacional.</dd></div>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section container learn-section" id="aprende" aria-labelledby="learn-heading">
+        <h2 class="section-label" id="learn-heading"><span class="section-index">02</span><span>Preparación</span></h2>
+        <div class="preparation-grid">
+          <a class="preparation-card" href="./temarios.html"><span class="tiny-label">QUÉ ESTUDIAR</span><h3>Temarios por fase</h3><p>Contenidos de la fase regional, la fase nacional y la competencia internacional.</p><span class="resource-action">Ver temarios <span aria-hidden="true">→</span></span></a>
+          <a class="preparation-card" href="./materiales.html"><span class="tiny-label">CON QUÉ PREPARARTE</span><h3>Materiales de estudio</h3><p>Una serie de videos introductorios y recursos abiertos para practicar.</p><span class="resource-action">Ver materiales <span aria-hidden="true">→</span></span></a>
+        </div>
+      </section>
+
+      <section class="faq-section container section" id="preguntas" aria-labelledby="faq-heading">
+        <div class="faq-intro"><h2 class="section-label" id="faq-heading"><span class="section-index">03</span><span>Preguntas frecuentes</span></h2><p>Para otras consultas, escríbenos a <a data-email href="mailto:ocia@progcomp.cl">ocia@progcomp.cl <span aria-hidden="true">↗</span></a></p></div>
+        <div class="faq-list">
+          <details><summary>¿Qué es la OCIA?<span aria-hidden="true">+</span></summary><div><p>Es la Olimpiada Chilena de Inteligencia Artificial, una competencia de resolución de problemas con análisis de datos, matemáticas y programación. Incluye fases pre-regional, regional y nacional para seleccionar a la delegación que representará a Chile en la olimpiada internacional.</p></div></details>
+          <details><summary>¿Necesito saber programar para empezar?<span aria-hidden="true">+</span></summary><div><p>Puedes comenzar con los materiales introductorios para la fase regional. No necesitas experiencia previa para seguir la serie. Consulta el temario para orientar tu preparación.</p><a href="./materiales.html">Ver materiales <span aria-hidden="true">→</span></a></div></details>
+          <details><summary>¿Cómo y cuándo puedo inscribirme?<span aria-hidden="true">+</span></summary><div><p>Encontrarás el formulario de inscripción, las fechas y las bases en la sección Convocatoria.</p><a href="#participa" data-open-tab="convocatoria">Ver convocatoria <span aria-hidden="true">→</span></a></div></details>
+          <details><summary>¿Quiénes podrán participar?<span aria-hidden="true">+</span></summary><div><p>Pueden participar estudiantes de 7° básico a 4° medio.</p></div></details>
+          <details><summary>¿La inscripción tiene algún costo?<span aria-hidden="true">+</span></summary><div><p>No. La inscripción a la OCIA es gratuita.</p></div></details>
+        </div>
+      </section>
+
+      <section class="section container news-section" id="noticias" aria-labelledby="news-heading">
+        <div class="section-heading-row"><h2 class="section-label" id="news-heading"><span class="section-index">04</span><span>Noticias</span></h2><a class="text-link" href="./noticias.html">Todas las noticias <span aria-hidden="true">→</span></a></div>
+        <p class="section-intro">Anuncios y resultados de cada etapa de la olimpiada.</p>
+        <div class="news-list" data-news-list data-news-limit="3">
+          <article class="news-item">
+            <img class="news-image news-image-contain" src="./assets/ocia-logo.svg" alt="Logo de la OCIA" width="400" height="400" loading="lazy">
+            <div class="news-copy"><h3><a href="./noticia-inscripciones.html">Abrimos las inscripciones para la fase pre-regional de la OCIA</a></h3><time class="news-date" datetime="2026-11-12">12 de noviembre de 2026</time><p>Inscripción gratuita para estudiantes de 7° básico a 4° medio, hasta el 3 de enero de 2027. La fase pre-regional se realizará online el 9 de enero de 2027.</p><a class="text-link" href="./noticia-inscripciones.html">Leer noticia <span aria-hidden="true">→</span></a></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contacto" aria-labelledby="contact-heading"><div class="container contact-inner"><div><p class="eyebrow">CONTACTO OCIA</p><h2 id="contact-heading">Consultas sobre la olimpiada.</h2><p>Escríbenos para consultas sobre participación, selección o preparación.</p><a class="contact-email" data-email href="mailto:ocia@progcomp.cl">ocia@progcomp.cl <span aria-hidden="true">↗</span></a></div></div></section>
+    </main>
+
+    <footer class="site-footer"><div class="container"><div class="footer-top"><a class="brand footer-brand" href="#inicio" aria-label="OCIA, volver al inicio"><img class="brand-mark" src="./assets/ocia-logo.svg" width="52" height="52" alt=""><span class="brand-name">OCIA</span><span class="brand-description">Olimpiada Chilena<br>de Inteligencia Artificial</span></a></div><div class="footer-bottom"><p>Olimpiada Chilena de Inteligencia Artificial</p><p>OCIA · Chile · <span data-cycle>2026–2027</span></p><a href="#inicio">Volver arriba <span aria-hidden="true">↑</span></a></div></div></footer>
+  </body>
+</html>
